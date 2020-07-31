@@ -12,29 +12,25 @@ import {
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
-
 const axios = require('axios').default;
+
 const ExploreCities = ({navigation}) => {
   const [popularCities, setPopularCities] = useState([]);
   const [trendingPlace, setTrendingPlace] = useState([]);
   const [friends, setFriends] = useState([]);
+
   useEffect(() => {
     axios
       .get(
-        'https://gist.githubusercontent.com/huytq98/7853a61ce83dde956ef5d619d6349665/raw/8952cba66c9fac45c05a992817315b6d43d6bd5e/travelApp.json',
+        'https://gist.githubusercontent.com/huytq98/7853a61ce83dde956ef5d619d6349665/raw/4a2dd4d3c9f01cfa44b65cf7b48aa73f20865cbb/travelApp.json',
       )
       .then(({data}) => {
         setPopularCities(data.popularCities);
         setTrendingPlace(data.trendingPlace);
         setFriends(data.friends);
-        // handle success
       })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      });
-  });
-
+      .catch((error) => console.error(error));
+  }, []);
   return (
     <View style={styles.container}>
       <StatusBar barStyle="dark-content" backgroundColor="white" />

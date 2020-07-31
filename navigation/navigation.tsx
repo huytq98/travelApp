@@ -11,7 +11,6 @@ export default function Navigator({navigation}) {
   return (
     <NavigationContainer>
       <AppStack.Navigator screenOptions={{headerShown: false}}>
-        {/*<AppStack.Screen name="Home" component={HomeScreen} />*/}
         <AppStack.Screen name="exploreCities" component={ExploreCities} />
         <AppStack.Screen name="myTrips" component={MyTrips} />
         <AppStack.Screen name="tripDetails" component={TripDetails} />
