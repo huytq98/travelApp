@@ -233,7 +233,6 @@ const styles = StyleSheet.create({
     paddingTop: 10,
   },
   textBold: {
-    fontFamily: 'segoeuib',
     fontSize: 30,
     fontWeight: 'bold',
   },

@@ -10,11 +10,11 @@ import {
   StatusBar,
   Image,
 } from 'react-native';
-import {useNavigation} from '@react-navigation/native';
+
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const axios = require('axios').default;
-const ExploreCities = () => {
+const ExploreCities = ({navigation}) => {
   const [popularCities, setPopularCities] = useState([]);
   const [trendingPlace, setTrendingPlace] = useState([]);
   const [friends, setFriends] = useState([]);
@@ -34,7 +34,6 @@ const ExploreCities = () => {
         console.log(error);
       });
   });
-  const navigation = useNavigation();
 
   return (
     <View style={styles.container}>

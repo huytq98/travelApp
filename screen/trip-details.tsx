@@ -11,7 +11,6 @@ import {
 } from 'react-native';
 // import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import MapView from 'react-native-maps';
 // const axios = require('axios').default;
 const TripDetails = ({navigation}) => {
   const [images, setImage] = useState([
@@ -62,14 +61,6 @@ const TripDetails = ({navigation}) => {
               }}
             />
           </View>
-          <MapView
-            initialRegion={{
-              latitude: 37.78825,
-              longitude: -122.4324,
-              latitudeDelta: 0.0922,
-              longitudeDelta: 0.0421,
-            }}
-          />
         </ScrollView>
       </View>
     </View>

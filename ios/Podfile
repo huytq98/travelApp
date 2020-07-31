@@ -10,8 +10,6 @@ target 'TravelApp' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
-  pod 'RNFBApp', :path => '../node_modules/@react-native-firebase/app'
-
   target 'TravelAppTests' do
     inherit! :complete
     # Pods for testing
